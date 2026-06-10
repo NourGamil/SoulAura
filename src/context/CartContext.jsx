@@ -1,10 +1,9 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { products } from "../lib/site";
 
 const CartContext = createContext(null);
-const STORAGE_KEY = "soleaura-cart-v1";
 
 function toQuantity(value) {
   const number = Number(value);
@@ -12,43 +11,8 @@ function toQuantity(value) {
   return Math.max(1, Math.min(99, Math.floor(number)));
 }
 
-function sanitizeCart(rawCart) {
-  if (!Array.isArray(rawCart)) return [];
-
-  const validProductIds = new Set(products.map((product) => product.id));
-  const merged = new Map();
-
-  rawCart.forEach((item) => {
-    const id = Number(item?.id);
-    if (!validProductIds.has(id)) return;
-    const current = merged.get(id) || 0;
-    merged.set(id, Math.min(99, current + toQuantity(item?.quantity)));
-  });
-
-  return Array.from(merged, ([id, quantity]) => ({ id, quantity }));
-}
-
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    try {
-      const savedCart = window.localStorage.getItem(STORAGE_KEY);
-      if (savedCart) {
-        setCart(sanitizeCart(JSON.parse(savedCart)));
-      }
-    } catch {
-      setCart([]);
-    } finally {
-      setReady(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!ready) return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
-  }, [cart, ready]);
 
   const addToCart = useCallback((productOrId, quantity = 1) => {
     const id = Number(typeof productOrId === "object" ? productOrId?.id : productOrId);
@@ -61,7 +25,12 @@ export function CartProvider({ children }) {
 
       if (existing) {
         return currentCart.map((item) =>
-          item.id === id ? { ...item, quantity: Math.min(99, item.quantity + requestedQuantity) } : item
+          item.id === id
+            ? {
+                ...item,
+                quantity: Math.min(99, item.quantity + requestedQuantity),
+              }
+            : item
         );
       }
 
@@ -72,15 +41,20 @@ export function CartProvider({ children }) {
   const setQuantity = useCallback((id, quantity) => {
     const safeId = Number(id);
     const safeQuantity = toQuantity(quantity);
+
     setCart((currentCart) =>
-      currentCart.map((item) => (item.id === safeId ? { ...item, quantity: safeQuantity } : item))
+      currentCart.map((item) =>
+        item.id === safeId ? { ...item, quantity: safeQuantity } : item
+      )
     );
   }, []);
 
   const increaseQuantity = useCallback((id) => {
     setCart((currentCart) =>
       currentCart.map((item) =>
-        item.id === Number(id) ? { ...item, quantity: Math.min(99, item.quantity + 1) } : item
+        item.id === Number(id)
+          ? { ...item, quantity: Math.min(99, item.quantity + 1) }
+          : item
       )
     );
   }, []);
@@ -88,13 +62,17 @@ export function CartProvider({ children }) {
   const decreaseQuantity = useCallback((id) => {
     setCart((currentCart) =>
       currentCart.map((item) =>
-        item.id === Number(id) ? { ...item, quantity: Math.max(1, item.quantity - 1) } : item
+        item.id === Number(id)
+          ? { ...item, quantity: Math.max(1, item.quantity - 1) }
+          : item
       )
     );
   }, []);
 
   const removeFromCart = useCallback((id) => {
-    setCart((currentCart) => currentCart.filter((item) => item.id !== Number(id)));
+    setCart((currentCart) =>
+      currentCart.filter((item) => item.id !== Number(id))
+    );
   }, []);
 
   const clearCart = useCallback(() => {
@@ -106,6 +84,7 @@ export function CartProvider({ children }) {
       .map((cartItem) => {
         const product = products.find((item) => item.id === cartItem.id);
         if (!product) return null;
+
         return {
           ...product,
           quantity: cartItem.quantity,
@@ -120,7 +99,7 @@ export function CartProvider({ children }) {
     const total = subtotal + delivery;
 
     return {
-      ready,
+      ready: true,
       cart,
       items,
       itemCount,
@@ -134,15 +113,25 @@ export function CartProvider({ children }) {
       removeFromCart,
       clearCart,
     };
-  }, [addToCart, cart, clearCart, decreaseQuantity, increaseQuantity, ready, removeFromCart, setQuantity]);
+  }, [
+    addToCart,
+    cart,
+    clearCart,
+    decreaseQuantity,
+    increaseQuantity,
+    removeFromCart,
+    setQuantity,
+  ]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 
 export function useCart() {
   const context = useContext(CartContext);
+
   if (!context) {
     throw new Error("useCart must be used inside CartProvider");
   }
+
   return context;
 }

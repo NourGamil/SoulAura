@@ -9,7 +9,7 @@ export default function WomenPage() {
     <main>
       <Navigation />
       <div className="h-[80px] w-[100vw]"></div>
-      <ProductGrid gender="women" title="Women’s collection" subtitle="From glossy pumps to playful canvas sneakers, styled with boutique-level presentation." />
+      <ProductGrid gender="women" title="Women’s collection"/>
       <Testimonials />
       <Footer />
     </main>

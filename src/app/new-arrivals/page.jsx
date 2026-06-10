@@ -10,7 +10,7 @@ export default function NewArrivalsPage() {
     <main>
       <Navigation />
       <div className="h-[80px] w-[100vw]"></div>
-      <ProductGrid featuredOnly title="New arrivals" subtitle="Fresh product cards from the newest SoleAura capsule, with the same quick-view experience as the full collection." />
+      <ProductGrid featuredOnly title="New arrivals" />
       <EditorialBand />
       <Newsletter />
       <Footer />

@@ -9,7 +9,7 @@ export default function MenPage() {
     <main>
       <Navigation />
       <div className="h-[80px] w-[100vw]"></div>
-      <ProductGrid gender="men" title="Men’s collection" subtitle="Leather classics, runners, and streetwear sneakers curated for clean outfits and long days." />
+      <ProductGrid gender="men" title="Men’s collection" />
       <EditorialBand />
       <Footer />
     </main>

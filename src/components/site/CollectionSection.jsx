@@ -12,7 +12,6 @@ export default function CollectionSection({ compact = false }) {
             <p className="text-xs font-black uppercase tracking-[0.35em] text-caramel">Curated capsules</p>
             <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-[-0.07em] text-ink md:text-6xl">Four moods. One premium closet.</h2>
           </div>
-          <p className="max-w-md text-base leading-7 text-smoke">From polished leather classics to neon streetwear, the old collection pages are now a proper editorial shopping experience.</p>
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {collections.map((item, index) => (

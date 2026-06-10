@@ -11,7 +11,7 @@ export default function CollectionPage() {
       <Navigation />
       <div className="h-[80px] w-[100vw]"></div>
       <CollectionSection />
-      <ProductGrid title="Complete catalogue" subtitle="A clean replacement for the old collection layout, with real product cards and quick preview." />
+      <ProductGrid title="Complete catalogue"/>
       <Newsletter />
       <Footer />
     </main>

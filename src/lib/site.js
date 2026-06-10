@@ -87,9 +87,9 @@ export const stats = [
 ];
 
 export const reviews = [
-  { name: "Mina Adel", role: "Creative director", quote: "The design feels boutique, but the comfort is everyday. My Monarch pair became my default shoe in one week.", image: "images/image-avatar.webp" },
-  { name: "Laila Kamal", role: "Stylist", quote: "The women’s evening line looks expensive and photographs beautifully. The Rose Glass Pump is unreal.", image: "images/women1.webp" },
-  { name: "Omar Rashed", role: "Product designer", quote: "I usually hate buying shoes online, but the product presentation and sizing notes made it smooth.", image: "images/men7.webp" },
+  { name: "Mina ", role: "Creative director", quote: "The design feels boutique, but the comfort is everyday. My Monarch pair became my default shoe in one week.", image: "images/image-avatar.webp" },
+  { name: "Laila ", role: "Stylist", quote: "The women’s evening line looks expensive and photographs beautifully. The Rose Glass Pump is unreal.", image: "images/image-avatar.webp" },
+  { name: "Omar ", role: "Product designer", quote: "I usually hate buying shoes online, but the product presentation and sizing notes made it smooth.", image: "images/image-avatar.webp" },
 ];
 
 export const benefits = [

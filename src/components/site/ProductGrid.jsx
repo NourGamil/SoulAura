@@ -8,7 +8,7 @@ import { useCart } from "../../context/CartContext";
 
 const filters = ["All", "Signature", "Performance", "Classic", "Streetwear", "Evening", "Lifestyle"];
 
-export default function ProductGrid({ title = "The full drop", subtitle = "A more premium version of the original men/women product pages, rebuilt with filters, quick preview, and smooth transitions.", gender = "all", featuredOnly = false }) {
+export default function ProductGrid({ title = "The full drop", gender = "all", featuredOnly = false }) {
   const { addToCart } = useCart();
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState(null);
@@ -45,7 +45,6 @@ export default function ProductGrid({ title = "The full drop", subtitle = "A mor
             <p className="text-xs font-black uppercase tracking-[0.35em] text-caramel">Shop the edit</p>
             <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-[-0.07em] text-ink md:text-6xl">{title}</h2>
           </div>
-          <p className="max-w-lg text-base leading-7 text-smoke">{subtitle}</p>
         </div>
 
         <div className="no-scrollbar mt-8 flex gap-3 overflow-x-auto pb-3">

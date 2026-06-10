@@ -22,7 +22,8 @@ export default function EditorialBand() {
           <div>
             <p className="text-xs font-black uppercase tracking-[0.35em] text-caramel">Lookbook energy</p>
             <h2 className="mt-4 text-4xl font-black tracking-[-0.07em] md:text-6xl">Built for city motion, styled for clean product storytelling.</h2>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-cream/70">This section replaces flat template blocks with a campaign-like feature area using the original assets. It gives the store more personality without complicating the code.</p>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-cream/70"> A curated sneaker experience built around comfort, bold silhouettes,
+  and everyday premium style.</p>
           </div>
           <div className="grid grid-cols-3 gap-4">
             {["images/men3.webp", "images/women6.webp", "images/men5.webp"].map((img, i) => (

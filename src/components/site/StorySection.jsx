@@ -21,10 +21,7 @@ export default function StorySection({ page = false }) {
 
         <div className="reveal-item">
           <p className="text-xs font-black uppercase tracking-[0.35em] text-caramel">About the rebuild</p>
-          <h2 className="mt-4 text-4xl font-black tracking-[-0.07em] text-ink md:text-6xl">From simple shoe pages to a premium retail experience.</h2>
-          <p className="mt-6 text-lg leading-8 text-smoke">
-            The original project had a nice idea: product gallery, men’s and women’s categories, collections, sign-in, and contact. I rebuilt that idea into {brand.name}: smoother navigation, cleaner product data, better responsive layouts, polished cards, and GSAP movement.
-          </p>
+          <h2 className="mt-4 text-4xl font-black tracking-[-0.07em] text-ink md:text-6xl">Crafted for Every Step Ahead.</h2>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {benefits.map((item, index) => (
               <div key={item} className="rounded-[1.5rem] border border-black/10 bg-white/55 p-4 shadow-soft backdrop-blur-xl">

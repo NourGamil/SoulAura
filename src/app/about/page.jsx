@@ -9,7 +9,8 @@ export default function AboutPage() {
   return (
     <main>
       <Navigation />
-      <div className="h-[80px] w-[100vw]"></div>      <StorySection />
+      <div className="h-[80px] w-[100vw]"></div>
+      <StorySection />
       <Testimonials />
       <Newsletter />
       <Footer />
