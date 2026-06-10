@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { IconArrowRight, IconCart, IconClose, IconTruck } from "@/components/ui/Icons";
-import { useCart } from "@/context/CartContext";
+import { IconArrowRight, IconCart, IconClose, IconTruck } from "../../components/ui/Icons";
+import { useCart } from "../../context/CartContext";
 
 function money(value) {
   return `$${Number(value || 0).toFixed(2)}`;

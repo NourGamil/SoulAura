@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { brand, navLinks, utilityLinks } from "@/lib/site";
-import { IconCart, IconClose, IconMenu, IconSearch, IconSpark, IconUser } from "@/components/ui/Icons";
-import { useCart } from "@/context/CartContext";
+import { brand, navLinks, utilityLinks } from "../../lib/site";
+import { IconCart, IconClose, IconMenu, IconSearch, IconSpark, IconUser } from "../../components/ui/Icons";
+import { useCart } from "../../context/CartContext";
 
 function isActivePath(pathname, href) {
   if (href === "/") return pathname === "/";
@@ -59,7 +59,7 @@ export default function Navigation() {
           <nav className="flex items-center justify-between gap-4 px-4 py-3 md:px-5">
             <Link href="/" className="group flex min-w-0 items-center gap-3">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-cream shadow-glow ring-1 ring-white/20 transition group-hover:rotate-[-6deg] group-hover:scale-105">
-                <img src="/images/soleaura-mark.svg" alt="SoleAura mark" className="h-8 w-8" />
+                <img src="images/soleaura-mark.svg" alt="SoleAura mark" className="h-8 w-8" />
               </span>
               <span className="leading-none">
                 <span className="block text-xl font-black tracking-[-0.06em] text-cream">{brand.name}</span>
@@ -110,7 +110,7 @@ export default function Navigation() {
           <aside ref={mobileRef} className="mx-auto mt-2 flex w-full max-w-md flex-col rounded-[2rem] border border-white/10 bg-ink p-5 text-cream shadow-soft" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between">
               <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
-                <span className="grid h-12 w-12 place-items-center rounded-full bg-cream"><img src="/images/soleaura-mark.svg" alt="SoleAura mark" className="h-8 w-8" /></span>
+                <span className="grid h-12 w-12 place-items-center rounded-full bg-cream"><img src="images/soleaura-mark.svg" alt="SoleAura mark" className="h-8 w-8" /></span>
                 <span className="text-2xl font-black tracking-[-0.06em]">{brand.name}</span>
               </Link>
               <button onClick={() => setOpen(false)} aria-label="Close menu" className="grid h-11 w-11 place-items-center rounded-2xl bg-cream text-ink"><IconClose className="h-5 w-5" /></button>

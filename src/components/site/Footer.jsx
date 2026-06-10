@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { brand, navLinks } from "@/lib/site";
+import { brand, navLinks } from "../../lib/site";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1fr_0.7fr_0.7fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <span className="grid h-12 w-12 place-items-center rounded-[1.1rem] bg-ink text-cream"><img src="/images/soleaura-mark.svg" alt="SoleAura mark" className="h-8 w-8" /></span>
+              <span className="grid h-12 w-12 place-items-center rounded-[1.1rem] bg-ink text-cream"><img src="images/soleaura-mark.svg" alt="SoleAura mark" className="h-8 w-8" /></span>
               <span className="text-2xl font-black tracking-[-0.06em] text-ink">{brand.name}</span>
             </Link>
             <p className="mt-5 max-w-md text-base leading-7 text-smoke">{brand.tagline}</p>

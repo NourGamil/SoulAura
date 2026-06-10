@@ -1,6 +1,6 @@
-import { reviews } from "@/lib/site";
+import { reviews } from "../../lib/site";
 import SectionReveal from "./SectionReveal";
-import { IconStar } from "@/components/ui/Icons";
+import { IconStar } from "../../components/ui/Icons";
 
 export default function Testimonials() {
   return (

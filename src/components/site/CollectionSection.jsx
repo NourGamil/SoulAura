@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { collections } from "@/lib/site";
+import { collections } from "../../lib/site";
 import SectionReveal from "./SectionReveal";
-import { IconArrowRight } from "@/components/ui/Icons";
+import { IconArrowRight } from "../../components/ui/Icons";
 
 export default function CollectionSection({ compact = false }) {
   return (

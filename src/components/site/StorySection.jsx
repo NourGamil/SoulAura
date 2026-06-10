@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { benefits, brand } from "@/lib/site";
+import { benefits, brand } from "../../lib/site";
 import SectionReveal from "./SectionReveal";
-import { IconArrowRight, IconShield, IconSpark, IconTruck } from "@/components/ui/Icons";
+import { IconArrowRight, IconShield, IconSpark, IconTruck } from "../../components/ui/Icons";
 
 export default function StorySection({ page = false }) {
   return (
@@ -10,8 +10,8 @@ export default function StorySection({ page = false }) {
         <div className="reveal-item relative">
           <div className="absolute -left-6 -top-6 h-32 w-32 rounded-full bg-caramel/20 blur-3xl" />
           <div className="grid gap-4 sm:grid-cols-2">
-            <img src="/images/collection1.webp" alt="Premium leather shoes" className="h-80 w-full rounded-[2.5rem] object-cover shadow-soft sm:translate-y-10" />
-            <img src="/images/collection4.webp" alt="Premium street sneakers" className="h-80 w-full rounded-[2.5rem] object-cover shadow-soft" />
+            <img src="images/collection1.webp" alt="Premium leather shoes" className="h-80 w-full rounded-[2.5rem] object-cover shadow-soft sm:translate-y-10" />
+            <img src="images/collection4.webp" alt="Premium street sneakers" className="h-80 w-full rounded-[2.5rem] object-cover shadow-soft" />
           </div>
           <div className="absolute bottom-6 left-6 rounded-[2rem] bg-cream/90 p-5 shadow-soft backdrop-blur-xl">
             <p className="text-3xl font-black tracking-[-0.06em] text-ink">Since 2026</p>

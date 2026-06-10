@@ -1,4 +1,4 @@
-import { IconArrowRight } from "@/components/ui/Icons";
+import { IconArrowRight } from "../../components/ui/Icons";
 
 export default function Newsletter() {
   return (

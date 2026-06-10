@@ -1,9 +1,9 @@
-import Navigation from "@/components/site/Navigation";
-import PageIntro from "@/components/site/PageIntro";
-import CollectionSection from "@/components/site/CollectionSection";
-import ProductGrid from "@/components/site/ProductGrid";
-import Newsletter from "@/components/site/Newsletter";
-import Footer from "@/components/site/Footer";
+import Navigation from "../../components/site/Navigation";
+import PageIntro from "../../components/site/PageIntro";
+import CollectionSection from "../../components/site/CollectionSection";
+import ProductGrid from "../../components/site/ProductGrid";
+import Newsletter from "../../components/site/Newsletter";
+import Footer from "../../components/site/Footer";
 
 export default function CollectionPage() {
   return (

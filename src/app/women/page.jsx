@@ -1,8 +1,8 @@
-import Navigation from "@/components/site/Navigation";
-import PageIntro from "@/components/site/PageIntro";
-import ProductGrid from "@/components/site/ProductGrid";
-import Testimonials from "@/components/site/Testimonials";
-import Footer from "@/components/site/Footer";
+import Navigation from "../../components/site/Navigation";
+import PageIntro from "../../components/site/PageIntro";
+import ProductGrid from "../../components/site/ProductGrid";
+import Testimonials from "../../components/site/Testimonials";
+import Footer from "../../components/site/Footer";
 
 export default function WomenPage() {
   return (

@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
-import { products } from "@/lib/site";
-import { IconArrowLeft, IconArrowRight, IconCart, IconClose, IconSpark } from "@/components/ui/Icons";
-import { useCart } from "@/context/CartContext";
+import { products } from "../../lib/site";
+import { IconArrowLeft, IconArrowRight, IconCart, IconClose, IconSpark } from "../../components/ui/Icons";
+import { useCart } from "../../context/CartContext";
 
 const filters = ["All", "Signature", "Performance", "Classic", "Streetwear", "Evening", "Lifestyle"];
 

@@ -1,7 +1,7 @@
-import Navigation from "@/components/site/Navigation";
-import PageIntro from "@/components/site/PageIntro";
-import CartSection from "@/components/site/CartSection";
-import Footer from "@/components/site/Footer";
+import Navigation from "../../components/site/Navigation";
+import PageIntro from "../../components/site/PageIntro";
+import CartSection from "../../components/site/CartSection";
+import Footer from "../../components/site/Footer";
 
 export default function CartPage() {
   return (

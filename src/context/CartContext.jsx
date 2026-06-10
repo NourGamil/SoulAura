@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { products } from "@/lib/site";
+import { products } from "../lib/site";
 
 const CartContext = createContext(null);
 const STORAGE_KEY = "soleaura-cart-v1";

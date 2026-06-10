@@ -25,7 +25,7 @@ export default function EditorialBand() {
             <p className="mt-6 max-w-xl text-lg leading-8 text-cream/70">This section replaces flat template blocks with a campaign-like feature area using the original assets. It gives the store more personality without complicating the code.</p>
           </div>
           <div className="grid grid-cols-3 gap-4">
-            {["/images/men3.webp", "/images/women6.webp", "/images/men5.webp"].map((img, i) => (
+            {["images/men3.webp", "images/women6.webp", "images/men5.webp"].map((img, i) => (
               <img key={img} src={img} alt="SoleAura lookbook" className={`band-shoe h-80 w-full rounded-[2rem] object-cover shadow-glow ${i === 1 ? "translate-y-8" : ""}`} />
             ))}
           </div>
